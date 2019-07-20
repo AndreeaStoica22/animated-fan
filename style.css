@@ -1,0 +1,85 @@
+
+body{
+    background-image: radial-gradient(#333 50%,#222,#777 55%);
+    height: 100vh;
+    background-size: 25px 25px;
+}
+    #box{
+    height: 400px;
+    width: 400px;
+    background-image: radial-gradient(transparent 68%,#333 70%);
+    position: absolute;
+    /* centrat absolut  */
+    border-radius: 50%
+}
+#box ul{
+    /* background-color: rgb(186, 169, 187); */
+    position: absolute;
+    height: 380px;
+    width: 380px;
+    border-radius: 50%;
+}
+#box li{
+    position: absolute;
+}
+#box li:last-child{
+    /* background-color:burlywood ; */
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-image: radial-gradient(transparent,#888 55% ,#444 60%)
+    
+}
+.center{
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    margin: auto;
+}
+#box .center li:last-child i {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+}
+#box li:not(:last-child) {
+    background-image:radial-gradient(at top,transparent 40%,#999 41%,#555);
+    background-size:200px 60px;
+    width: 150px;
+    height: 60px;
+    top: 160px;
+    transform-origin: 190px 50%;
+    border-radius: 0 0 50% 50%;
+}
+#box li:nth-child(1){
+    transform: rotate(0deg);
+}
+#box li:nth-child(2){
+    transform: rotate(60deg);
+}
+#box li:nth-child(3){
+    transform: rotate(120deg);
+}
+#box li:nth-child(4){
+    transform: rotate(180deg);
+}
+#box li:nth-child(5) {
+    transform: rotate(240deg);
+}
+#box li:nth-child(6) {
+    transform: rotate(300deg);
+}
+/* animatie in css */
+@keyframes rotate-fan{
+    from{
+        transform: rotate(0deg)
+
+    }
+    to{
+        transform: rotate(360deg)
+
+    }
+}
+#box ul{
+    animation:rotate-fan 3s linear infinite;
+}
